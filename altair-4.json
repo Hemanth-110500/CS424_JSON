@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 300
+    }
+  },
+  "data": {
+    "format": {
+      "type": "json"
+    },
+    "url": "altair-data-686c9f5869afa19ad2a9b2f2d04cde29.json"
+  },
+  "encoding": {
+    "color": {
+      "aggregate": "mean",
+      "field": "SPEED",
+      "legend": {
+        "title": "Average Speed"
+      },
+      "scale": {
+        "scheme": "greenblue"
+      },
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "HOUR",
+        "type": "quantitative"
+      },
+      {
+        "field": "DAY_OF_WEEK",
+        "type": "quantitative"
+      },
+      {
+        "aggregate": "mean",
+        "field": "SPEED",
+        "title": "Average Speed",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "field": "HOUR",
+      "type": "ordinal"
+    },
+    "y": {
+      "field": "DAY_OF_WEEK",
+      "type": "ordinal"
+    }
+  },
+  "height": 200,
+  "mark": {
+    "type": "rect"
+  },
+  "transform": [
+    {
+      "filter": {
+        "param": "lineSelector"
+      }
+    }
+  ],
+  "width": 600
+}

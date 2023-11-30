@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 300
+    }
+  },
+  "data": {
+    "format": {
+      "type": "json"
+    },
+    "url": "altair-data-b483c3ab33fec9d31e5527ffbc814b72.json"
+  },
+  "encoding": {
+    "color": {
+      "condition": {
+        "field": "SPEED",
+        "param": "mapSelector",
+        "scale": {
+          "scheme": "blues"
+        },
+        "type": "quantitative"
+      },
+      "value": "lightgray"
+    },
+    "latitude": {
+      "field": "lat",
+      "type": "quantitative"
+    },
+    "longitude": {
+      "field": "lon",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "STREET",
+        "type": "nominal"
+      },
+      {
+        "field": "SPEED",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "mark": {
+    "opacity": 0.8,
+    "size": 30,
+    "type": "circle"
+  },
+  "params": [
+    {
+      "name": "mapSelector",
+      "select": {
+        "fields": [
+          "STREET"
+        ],
+        "type": "point"
+      }
+    }
+  ]
+}
